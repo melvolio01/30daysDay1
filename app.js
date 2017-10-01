@@ -16,8 +16,13 @@ window.addEventListener('keydown', function(e){
     key.classList.add('playing');
 });
 
-    window.addEventListener('keyup', function(e){
-      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 
-      key.classList.remove('playing');
-   });
+
+
+
+// My solution for keyup - not very DRY
+window.addEventListener('keyup', function(e){
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+  key.classList.remove('playing');
+});
